@@ -14,6 +14,7 @@
 		101B88F12897AEA100CACA0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101B88F02897AEA100CACA0B /* Assets.xcassets */; };
 		101B88F42897AEA100CACA0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101B88F22897AEA100CACA0B /* LaunchScreen.storyboard */; };
 		101B88F72897AEA100CACA0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B88F62897AEA100CACA0B /* main.m */; };
+		101B89002897B7D100CACA0B /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B88FF2897B7D100CACA0B /* Memo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		101B88F32897AEA100CACA0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101B88F52897AEA100CACA0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101B88F62897AEA100CACA0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		101B88FE2897B7D100CACA0B /* Memo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Memo.h; sourceTree = "<group>"; };
+		101B88FF2897B7D100CACA0B /* Memo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Memo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		101B88E02897AEA000CACA0B /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				101B88FD2897B78300CACA0B /* Model */,
 				101B88E12897AEA000CACA0B /* AppDelegate.h */,
 				101B88E22897AEA000CACA0B /* AppDelegate.m */,
 				101B88E42897AEA000CACA0B /* SceneDelegate.h */,
@@ -72,6 +76,15 @@
 				101B88ED2897AEA000CACA0B /* Memo.xcdatamodeld */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		101B88FD2897B78300CACA0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				101B88FE2897B7D100CACA0B /* Memo.h */,
+				101B88FF2897B7D100CACA0B /* Memo.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101B89002897B7D100CACA0B /* Memo.m in Sources */,
 				101B88F72897AEA100CACA0B /* main.m in Sources */,
 				101B88E32897AEA000CACA0B /* AppDelegate.m in Sources */,
 				101B88E62897AEA000CACA0B /* SceneDelegate.m in Sources */,
