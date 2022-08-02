@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Model/Memo.h"
+#import "Memo+CoreDataProperties.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

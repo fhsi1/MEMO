@@ -8,6 +8,7 @@
 #import "MemoListTableViewController.h"
 #import "Model/Memo.h"
 #import "DetailViewController.h"
+#import "DataManager.h"
 
 @interface MemoListTableViewController ()
 
@@ -21,7 +22,7 @@
     // 선택한 cell 의 row 얻기
     NSIndexPath* indexPath = [self.tableView indexPathForCell:(UITableViewCell*)sender];
     if (indexPath != nil) {
-        Memo* target = [[Memo dummyMemoList] objectAtIndex:indexPath.row];
+        Memo* target = [[[DataManager sharedInstance] memoList] objectAtIndex:indexPath.row];
         
         // segueway 로 접근할 scene 에 접근할 수 있다. - DetailView
         DetailViewController* vc = (DetailViewController*)segue.destinationViewController;
@@ -33,6 +34,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [[DataManager sharedInstance] fetchMemo];
     [self.tableView reloadData];
 }
 
@@ -60,14 +62,14 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[Memo dummyMemoList] count];
+    return [[[DataManager sharedInstance] memoList] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // 메모, 날짜 출력 구현
-    Memo* target = [[Memo dummyMemoList] objectAtIndex:indexPath.row];
+    Memo* target = [[[DataManager sharedInstance] memoList] objectAtIndex:indexPath.row];
     cell.textLabel.text = target.content;
     cell.detailTextLabel.text = [self.formatter stringFromDate:target.insertDate];
     
