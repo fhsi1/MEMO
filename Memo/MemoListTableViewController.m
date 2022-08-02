@@ -10,12 +10,20 @@
 
 @interface MemoListTableViewController ()
 
+@property (strong, nonatomic) NSDateFormatter* formatter;
+
 @end
 
 @implementation MemoListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // formatter init
+    self.formatter = [[NSDateFormatter alloc] init];
+    self.formatter.dateStyle = NSDateFormatterLongStyle;
+    self.formatter.timeStyle = NSDateFormatterNoStyle; // 시간표시 x
+    self.formatter.locale = [NSLocale localeWithLocaleIdentifier:@"Ko_kr"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,7 +49,7 @@
     // 메모, 날짜 출력 구현
     Memo* target = [[Memo dummyMemoList] objectAtIndex:indexPath.row];
     cell.textLabel.text = target.content;
-    cell.detailTextLabel.text = target.insertDate.description;
+    cell.detailTextLabel.text = [self.formatter stringFromDate:target.insertDate];
     
     
     return cell;
