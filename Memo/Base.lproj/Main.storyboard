@@ -63,7 +63,7 @@
         <!--New MEMO-->
         <scene sceneID="a5S-up-epa">
             <objects>
-                <viewController id="Erb-Rl-ce2" sceneMemberID="viewController">
+                <viewController id="Erb-Rl-ce2" customClass="ComposeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5YU-Oe-W6B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
