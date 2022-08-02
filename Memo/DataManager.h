@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Memo+CoreDataProperties.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 새로운 memo 저장 메서드
 - (void)addNewMemo: (NSString*)memo;
+
+// memo 삭제 메서드
+- (void)deleteMemo: (Memo*)memo;
 
 
 @end

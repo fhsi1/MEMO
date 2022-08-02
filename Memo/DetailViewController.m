@@ -7,12 +7,15 @@
   
 #import "DetailViewController.h"
 #import "ComposeViewController.h"
+#import "DataManager.h"
 
 @interface DetailViewController () <UITableViewDataSource>
 
 @property (strong, nonatomic) NSDateFormatter* formatter;
 
 @property (weak, nonatomic) IBOutlet UITableView *memoTableView;
+
+- (IBAction)deleteMemo:(id)sender;
 
 @end
 
@@ -75,5 +78,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)deleteMemo:(id)sender {
+    // UIAlert Instance 생성
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Confirm deletion" message:@"Are you sure you want to delete the memo?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    // 경고창에 버튼 추가
+    // 먼저 액션을 만들고 AlertController 에 추가한다.
+    // 어떤 버튼을 선택하여도 경고창은 사라지기 때문에, 사라지는 코드는 구현하지 않아도 된다.
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [[DataManager sharedInstance] deleteMemo:self.memo];
+        
+        // navigationController 에 접근하여 현재 화면을 pop 해준다.
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alert addAction:okAction];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alert addAction:cancelAction];
+    
+    // 경고창 화면에 표시
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 @end

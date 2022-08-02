@@ -51,6 +51,14 @@
     [self saveContext];
 }
 
+- (void)deleteMemo: (Memo*)memo {
+    // 정상적인 메모가 전달되었다면 삭제하고 Context 를 저장
+    if (memo != nil) {
+        [self.mainContext deleteObject:memo];
+        [self saveContext];
+    }
+}
+
 // custom getter
 - (NSManagedObjectContext*)mainContext {
     return self.persistentContainer.viewContext;
