@@ -77,25 +77,44 @@
     return cell;
 }
 
-/*
+
+// 편집 기능 활성화
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+// 편집 스타일 지정
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 삭제 스타일
+    return UITableViewCellEditingStyleDelete;
+}
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // tableView 에서 Cell 을 삭제
+    // 위의 UITableViewCellEditingStyleDelete 가 리턴되면 if 문 실행
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         // Delete the row from the data source
+        Memo* target = [[DataManager sharedInstance] memoList][indexPath.row];
+        
+        // Database 에서 메모를 삭제
+        [[DataManager sharedInstance] deleteMemo:target];
+        
+        // 배열에서 데이터 삭제
+        [[[DataManager sharedInstance] memoList] removeObjectAtIndex:indexPath.row];
+        
+        // tableView 에서 cell 을 삭제
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
