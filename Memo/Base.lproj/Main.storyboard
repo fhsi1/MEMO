@@ -87,7 +87,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New MEMO" id="M6y-7V-QuS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1kK-qP-YT7"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1kK-qP-YT7">
+                            <connections>
+                                <action selector="close:" destination="Erb-Rl-ce2" id="YM7-XM-gGX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="oKW-n1-BUL"/>
                     </navigationItem>
                 </viewController>
