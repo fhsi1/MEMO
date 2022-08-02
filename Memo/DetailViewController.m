@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *memoTableView;
 
 - (IBAction)deleteMemo:(id)sender;
+- (IBAction)share:(id)sender;
 
 @end
 
@@ -78,6 +79,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)share:(id)sender {
+    // 공유기능 UIActivityViewController 로 구현
+    // 메모만 따로 저장
+    NSString* memo = self.memo.content;
+    UIActivityViewController* vc = [[UIActivityViewController alloc] initWithActivityItems:@[memo] applicationActivities:nil];
+    
+    // UIActivityViewController 화면에 표시
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (IBAction)deleteMemo:(id)sender {
     // UIAlert Instance 생성
