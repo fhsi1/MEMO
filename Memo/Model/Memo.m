@@ -9,6 +9,8 @@
 
 @implementation Memo
 
+// storage
+static NSMutableArray* _dummyMemoList = nil;
 - (instancetype)initWithContent:(NSString*)content {
     self = [super init];
     if (self != nil) {
@@ -18,11 +20,15 @@
     return self;
 }
 
-+ (NSArray*)dummyMemoList {
-    Memo* memo1 = [[Memo alloc] initWithContent:@"Lorem Ipsum 111"];
-    Memo* memo2 = [[Memo alloc] initWithContent:@"Lorem Ipsum 222"];
-    
-    return [NSArray arrayWithObjects:memo1, memo2, nil];
++ (NSMutableArray*)dummyMemoList {
+    // lazy loading pattern
+    if (_dummyMemoList == nil) {
+        Memo* memo1 = [[Memo alloc] initWithContent:@"Lorem Ipsum 111"];
+        Memo* memo2 = [[Memo alloc] initWithContent:@"Lorem Ipsum 222"];
+        
+        _dummyMemoList = [NSMutableArray arrayWithObjects:memo1, memo2, nil];
+    }
+    return _dummyMemoList;
 }
 
 @end
