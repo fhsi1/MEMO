@@ -17,6 +17,7 @@
 		101B89002897B7D100CACA0B /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B88FF2897B7D100CACA0B /* Memo.m */; };
 		101B89032897BB9400CACA0B /* MemoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B89022897BB9400CACA0B /* MemoListTableViewController.m */; };
 		105282302898E1E200C2FAC1 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1052822F2898E1E200C2FAC1 /* ComposeViewController.m */; };
+		105282332898EABC00C2FAC1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105282322898EABC00C2FAC1 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		101B89022897BB9400CACA0B /* MemoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoListTableViewController.m; sourceTree = "<group>"; };
 		1052822E2898E1E200C2FAC1 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		1052822F2898E1E200C2FAC1 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		105282312898EABC00C2FAC1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		105282322898EABC00C2FAC1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				101B88E42897AEA000CACA0B /* SceneDelegate.h */,
 				101B88E52897AEA000CACA0B /* SceneDelegate.m */,
 				101B88EA2897AEA000CACA0B /* Main.storyboard */,
+				105282312898EABC00C2FAC1 /* DetailViewController.h */,
+				105282322898EABC00C2FAC1 /* DetailViewController.m */,
 				1052822E2898E1E200C2FAC1 /* ComposeViewController.h */,
 				1052822F2898E1E200C2FAC1 /* ComposeViewController.m */,
 				101B89012897BB9400CACA0B /* MemoListTableViewController.h */,
@@ -170,6 +175,7 @@
 				101B89002897B7D100CACA0B /* Memo.m in Sources */,
 				101B89032897BB9400CACA0B /* MemoListTableViewController.m in Sources */,
 				101B88F72897AEA100CACA0B /* main.m in Sources */,
+				105282332898EABC00C2FAC1 /* DetailViewController.m in Sources */,
 				101B88E32897AEA000CACA0B /* AppDelegate.m in Sources */,
 				105282302898E1E200C2FAC1 /* ComposeViewController.m in Sources */,
 				101B88E62897AEA000CACA0B /* SceneDelegate.m in Sources */,
