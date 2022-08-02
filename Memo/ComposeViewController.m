@@ -7,6 +7,7 @@
 
 #import "ComposeViewController.h"
 #import "Model/Memo.h"
+#import "DataManager.h"
 
 @interface ComposeViewController ()
 
@@ -43,7 +44,7 @@
     
     NSString* memo = self.memoTextView.text;
     
-    
+    [[DataManager sharedInstance] addNewMemo:memo];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

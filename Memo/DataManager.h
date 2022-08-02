@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 // Data 읽어오는 메서드
 - (void)fetchMemo;
 
+// 새로운 memo 저장 메서드
+- (void)addNewMemo: (NSString*)memo;
+
 
 @end
 

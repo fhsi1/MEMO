@@ -6,6 +6,7 @@
 //
 
 #import "DataManager.h"
+#import "Memo+CoreDataProperties.h"
 
 @implementation DataManager
 
@@ -38,6 +39,16 @@
     
     // 최종 결과 memoList 에 저장
     [self.memoList setArray:result];
+}
+
+- (void)addNewMemo: (NSString*)memo {
+    // 새로운 메모 인스턴스 생성 ( 메모가 임시로 생성되어있는 상태 )
+    Memo* newMemo = [[Memo alloc] initWithContext:self.mainContext];
+    newMemo.content = memo;
+    newMemo.insertDate = [NSDate date];
+    
+    // 실제로 데이터베이스 파일에 저장하려면 context 를 저장해야 한다.
+    [self saveContext];
 }
 
 // custom getter
