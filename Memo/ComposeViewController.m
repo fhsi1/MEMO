@@ -24,6 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // 전달된 메모가 있는지 확인
+    if (self.editTarget != nil) {
+        self.navigationItem.title = @"Edit";
+        self.memoTextView.text = self.editTarget.content;
+    } else {
+        self.navigationItem.title = @"New MEMO";
+        self.memoTextView.text = @"";
+    }
 }
 
 /*
