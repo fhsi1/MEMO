@@ -63,17 +63,38 @@
             </objects>
             <point key="canvasLocation" x="229" y="159"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail-->
         <scene sceneID="ROP-R7-Ghm">
             <objects>
                 <viewController id="aSQ-s7-yGf" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVq-ul-h3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-1C-oYB">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="5WR-gV-6Ed"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Izb-1B-QpB">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aeC-Xb-KBw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Izb-1B-QpB" firstAttribute="top" secondItem="aeC-Xb-KBw" secondAttribute="top" id="eho-H5-foV"/>
+                            <constraint firstItem="DFf-1C-oYB" firstAttribute="top" secondItem="Izb-1B-QpB" secondAttribute="bottom" id="grz-AV-dse"/>
+                            <constraint firstItem="DFf-1C-oYB" firstAttribute="trailing" secondItem="aeC-Xb-KBw" secondAttribute="trailing" id="hgr-c5-MYs"/>
+                            <constraint firstItem="DFf-1C-oYB" firstAttribute="leading" secondItem="aeC-Xb-KBw" secondAttribute="leading" id="jtX-qk-SAX"/>
+                            <constraint firstItem="aeC-Xb-KBw" firstAttribute="trailing" secondItem="Izb-1B-QpB" secondAttribute="trailing" id="rcC-Cc-wDz"/>
+                            <constraint firstItem="Izb-1B-QpB" firstAttribute="leading" secondItem="aeC-Xb-KBw" secondAttribute="leading" id="sAI-r5-tlf"/>
+                            <constraint firstItem="DFf-1C-oYB" firstAttribute="bottom" secondItem="aeC-Xb-KBw" secondAttribute="bottom" id="uKJ-2U-82P"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="k9K-Qv-YoA"/>
+                    <navigationItem key="navigationItem" title="Detail" id="kc6-FM-Wgr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pj-wu-dK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
