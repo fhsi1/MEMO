@@ -9,6 +9,8 @@
 
 @interface DetailViewController () <UITableViewDataSource>
 
+@property (strong, nonatomic) NSDateFormatter* formatter;
+
 @end
 
 @implementation DetailViewController
@@ -22,9 +24,13 @@
     
     if (indexPath.row == 0) {
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"memoCell" forIndexPath:indexPath];
+        
+        cell.textLabel.text = self.memo.content;
         return cell;
     } else if (indexPath.row == 1) {
         UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"dateCell" forIndexPath:indexPath];
+        
+        cell.textLabel.text = [self.formatter stringFromDate:self.memo.insertDate];
         return cell;
     }
     return [[UITableViewCell alloc] init];
@@ -33,6 +39,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // formatter init
+    self.formatter = [[NSDateFormatter alloc] init];
+    self.formatter.dateStyle = NSDateFormatterLongStyle;
+    self.formatter.timeStyle = NSDateFormatterMediumStyle; // 시간표시 x
+    self.formatter.locale = [NSLocale localeWithLocaleIdentifier:@"Ko_kr"];
 }
 
 /*
