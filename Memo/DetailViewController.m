@@ -6,6 +6,7 @@
 //
 
 #import "DetailViewController.h"
+#import "ComposeViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource>
 
@@ -34,6 +35,15 @@
         return cell;
     }
     return [[UITableViewCell alloc] init];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // NavigationController 의 childViewController 중 0번째 index에 해당
+    ComposeViewController* vc = [[segue.destinationViewController childViewControllers] objectAtIndex:0];
+    
+    // editTarget 속성에 메모 전달
+    vc.editTarget = self.memo;
 }
 
 - (void)viewDidLoad {

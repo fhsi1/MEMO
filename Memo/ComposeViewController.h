@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ComposeViewController : UIViewController
 
+// 수정할 메모 전달받아 해당 속성에 저장
+@property (strong, nonatomic) Memo* editTarget;
+
 @end
 
 NS_ASSUME_NONNULL_END
