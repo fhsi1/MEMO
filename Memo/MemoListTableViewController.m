@@ -7,6 +7,7 @@
 
 #import "MemoListTableViewController.h"
 #import "Model/Memo.h"
+#import "DetailViewController.h"
 
 @interface MemoListTableViewController ()
 
@@ -15,6 +16,19 @@
 @end
 
 @implementation MemoListTableViewController
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // 선택한 cell 의 row 얻기
+    NSIndexPath* indexPath = [self.tableView indexPathForCell:(UITableViewCell*)sender];
+    if (indexPath != nil) {
+        Memo* target = [[Memo dummyMemoList] objectAtIndex:indexPath.row];
+        
+        // segueway 로 접근할 scene 에 접근할 수 있다. - DetailView
+        DetailViewController* vc = (DetailViewController*)segue.destinationViewController;
+        vc.memo = target;
+        
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
