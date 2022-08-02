@@ -4,13 +4,15 @@
 //
 //  Created by Yujean Cho on 2022/08/02.
 //
-
+  
 #import "DetailViewController.h"
 #import "ComposeViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource>
 
 @property (strong, nonatomic) NSDateFormatter* formatter;
+
+@property (weak, nonatomic) IBOutlet UITableView *memoTableView;
 
 @end
 
@@ -46,6 +48,12 @@
     vc.editTarget = self.memo;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.memoTableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -55,6 +63,7 @@
     self.formatter.dateStyle = NSDateFormatterLongStyle;
     self.formatter.timeStyle = NSDateFormatterMediumStyle; // 시간표시 x
     self.formatter.locale = [NSLocale localeWithLocaleIdentifier:@"Ko_kr"];
+    
 }
 
 /*
