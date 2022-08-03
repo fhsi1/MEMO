@@ -45,10 +45,10 @@
 		105282322898EABC00C2FAC1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		105282342898FDCF00C2FAC1 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		105282352898FDCF00C2FAC1 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		10528237289903CD00C2FAC1 /* Memo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataProperties.h"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		10528238289903CD00C2FAC1 /* Memo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataClass.h"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataClass.h"; sourceTree = "<group>"; };
-		10528239289903CD00C2FAC1 /* Memo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataClass.m"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataClass.m"; sourceTree = "<group>"; };
-		1052823A289903CD00C2FAC1 /* Memo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataProperties.m"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		10528237289903CD00C2FAC1 /* Memo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataProperties.h"; path = "MemoObjC/Memo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		10528238289903CD00C2FAC1 /* Memo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataClass.h"; path = "MemoObjC/Memo+CoreDataClass.h"; sourceTree = "<group>"; };
+		10528239289903CD00C2FAC1 /* Memo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataClass.m"; path = "MemoObjC/Memo+CoreDataClass.m"; sourceTree = "<group>"; };
+		1052823A289903CD00C2FAC1 /* Memo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataProperties.m"; path = "MemoObjC/Memo+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
