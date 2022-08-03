@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		101B88DE2897AEA000CACA0B /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		101B88DE2897AEA000CACA0B /* MemoObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101B88E12897AEA000CACA0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		101B88E22897AEA000CACA0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		101B88E42897AEA000CACA0B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		105282322898EABC00C2FAC1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		105282342898FDCF00C2FAC1 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		105282352898FDCF00C2FAC1 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		10528237289903CD00C2FAC1 /* Memo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataProperties.h"; path = "Memo/Memo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		10528238289903CD00C2FAC1 /* Memo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataClass.h"; path = "Memo/Memo+CoreDataClass.h"; sourceTree = "<group>"; };
-		10528239289903CD00C2FAC1 /* Memo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataClass.m"; path = "Memo/Memo+CoreDataClass.m"; sourceTree = "<group>"; };
-		1052823A289903CD00C2FAC1 /* Memo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataProperties.m"; path = "Memo/Memo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		10528237289903CD00C2FAC1 /* Memo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataProperties.h"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		10528238289903CD00C2FAC1 /* Memo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Memo+CoreDataClass.h"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataClass.h"; sourceTree = "<group>"; };
+		10528239289903CD00C2FAC1 /* Memo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataClass.m"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataClass.m"; sourceTree = "<group>"; };
+		1052823A289903CD00C2FAC1 /* Memo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Memo+CoreDataProperties.m"; path = "../../myProject/MemoObjC/MemoObjC/Memo+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 		101B88DF2897AEA000CACA0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				101B88DE2897AEA000CACA0B /* Memo.app */,
+				101B88DE2897AEA000CACA0B /* MemoObjC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +105,8 @@
 				101B88F62897AEA100CACA0B /* main.m */,
 				101B88ED2897AEA000CACA0B /* Memo.xcdatamodeld */,
 			);
-			path = Memo;
+			name = Memo;
+			path = MemoObjC;
 			sourceTree = "<group>";
 		};
 		101B88FD2897B78300CACA0B /* Model */ = {
@@ -120,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		101B88DD2897AEA000CACA0B /* Memo */ = {
+		101B88DD2897AEA000CACA0B /* MemoObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 101B88FA2897AEA100CACA0B /* Build configuration list for PBXNativeTarget "Memo" */;
+			buildConfigurationList = 101B88FA2897AEA100CACA0B /* Build configuration list for PBXNativeTarget "MemoObjC" */;
 			buildPhases = (
 				101B88DA2897AEA000CACA0B /* Sources */,
 				101B88DB2897AEA000CACA0B /* Frameworks */,
@@ -132,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = Memo;
+			name = MemoObjC;
 			productName = Memo;
-			productReference = 101B88DE2897AEA000CACA0B /* Memo.app */;
+			productReference = 101B88DE2897AEA000CACA0B /* MemoObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 101B88D92897AEA000CACA0B /* Build configuration list for PBXProject "Memo" */;
+			buildConfigurationList = 101B88D92897AEA000CACA0B /* Build configuration list for PBXProject "MemoObjC" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -164,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				101B88DD2897AEA000CACA0B /* Memo */,
+				101B88DD2897AEA000CACA0B /* MemoObjC */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = USJP36TZ2H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = MemoObjC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MEMO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -371,7 +372,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = USJP36TZ2H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = MemoObjC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MEMO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -394,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		101B88D92897AEA000CACA0B /* Build configuration list for PBXProject "Memo" */ = {
+		101B88D92897AEA000CACA0B /* Build configuration list for PBXProject "MemoObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				101B88F82897AEA100CACA0B /* Debug */,
@@ -403,7 +404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		101B88FA2897AEA100CACA0B /* Build configuration list for PBXNativeTarget "Memo" */ = {
+		101B88FA2897AEA100CACA0B /* Build configuration list for PBXNativeTarget "MemoObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				101B88FB2897AEA100CACA0B /* Debug */,
